@@ -22,3 +22,9 @@ jobs:
       - name: Run test suite
         run: |
           pipenv run pytest
+      - name: Install Black
+        run: |
+          pipenv install --dev black
+      - name: Run Black
+        run: |
+          pipenv run black --check .
